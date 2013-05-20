@@ -27,6 +27,7 @@ class PostsController < ApplicationController
   def new
     @post = Post.new
     @post.user = current_user
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @post }
